@@ -11,13 +11,16 @@ export default function Weather(props) {
     return ( 
         <View>
         <ImageBackground source={require('../bg2.jpg')} style={styles.backdrop}>
-                <Text>Zip Code</Text>
-                <Text>{props.zipCode}</Text>
+                <View style={styles.black_bar}>
+                <Text style={styles.zip}>Zip Code is {props.zipCode}</Text>
                 <Forecast {...forecastInfo} />
+            
+            
+            </View>
             </ImageBackground>
         </View>
-        );
-       }
+    )}
+    
        const styles = StyleSheet.create({
         backdrop: {
             
@@ -28,4 +31,14 @@ export default function Weather(props) {
             justifyContent: "center",
             alignItems: "center",
         },
-       });
+        black_bar: {
+            backgroundColor: 'rgba(0,0,0,0.5)',
+            width: '100%',
+            height: '50%',
+            alignItems: 'center',
+            justifyContent: 'center'
+        },
+        zip: {
+            color: '#ffffff'
+        }
+       })
