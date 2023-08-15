@@ -1,15 +1,15 @@
+import Weather from './Components/Weather.js'
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+
 export default function App() {
- const doIt = () => {
- console.log("Hello from console")
- }
- return (
- <View style={styles.container}>
- <Text onPress={doIt}>Hello world</Text>
- <StatusBar style="auto" />
- </View>
+ 
+  return (
+  <View style={styles.container}>
+  <Weather zipCode="90110"/>
+  <StatusBar style="auto" />
+  </View>
  );
 }
 const styles = StyleSheet.create({
@@ -20,3 +20,4 @@ const styles = StyleSheet.create({
  justifyContent: 'center',
  },
 });
+
